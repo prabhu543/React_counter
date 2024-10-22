@@ -1,0 +1,83 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e8dddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+.counter_box{
+  background-color: #fefefe;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  word-break: break-word;
+}
+.counter_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:nth-of-type(1){
+  background-color: #40ca36;
+  color: white;
+}
+button:nth-of-type(2){
+  background-color: #e18c0c;
+  color: white;
+}
+button:nth-of-type(3){
+  background-color: rgb(241, 33, 33);
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .counter_box {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
