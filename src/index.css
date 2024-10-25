@@ -1,36 +1,39 @@
-body {
+.main {
   font-family: 'Arial', sans-serif;
-  background-color: #e8dddd;
+  background-color: gray;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 1rem;
+  height: 100vh;
+  width: 100%;
   text-transform: capitalize;
-  box-sizing: border-box;
+  overflow: hidden;
 }
-.counter_box{
+
+.counter_box {
   background-color: #fefefe;
-  padding: 2rem;
+  padding: 1.5rem;
+  margin: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  width: 100%;
   max-width: 400px;
+  width: 100%;
+  overflow: hidden;
 }
 
 h1 {
   color: #2c3e50;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   margin-bottom: 1.5rem;
   text-align: center;
   word-break: break-word;
 }
-.counter_btn{
+
+.counter_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
@@ -41,9 +44,12 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   text-transform: capitalize;
   outline: none;
+  flex: 1;
+  /* min-width: 100px;
+  max-width: 150px; */
 }
 
 button:hover {
@@ -54,30 +60,32 @@ button:active {
   transform: translateY(1px);
 }
 
-button:nth-of-type(1){
+button:nth-of-type(1) {
   background-color: #40ca36;
   color: white;
 }
-button:nth-of-type(2){
+
+button:nth-of-type(2) {
   background-color: #e18c0c;
   color: white;
 }
-button:nth-of-type(3){
+
+button:nth-of-type(3) {
   background-color: rgb(241, 33, 33);
   color: white;
 }
 
 @media (max-width: 480px) {
   .counter_box {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 
-  h1 {
-    font-size: 2rem;
+  .counter_btn {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
+    width: 100%;
   }
 }
